@@ -1,6 +1,21 @@
 # drv8701P_predriver
 This is an example of a predriver for DRV8701P using Slow Decay
 
+This driver provides the SetCommand and GetCommand
+
+SetCommand(float motor_command, bool nsleep)
+  
+  Params: motor_command: -100.0 to 100.0 with negative being reverse and positive being forward
+          nsleep: Boolean variable that will set the DRV8701P chip to sleep
+          
+NOTE: Coasting mode is not implemented in this driver
+NOTE: Slew rate of 1%/ms is implemented on assumption tick rate is 1khz
+NOTE: This driver slews on increasing forward/reverse pwm and decreasing forward/reverse pwm
+
+
+
+
+
 Test Report:
 
 Test 'test_drv8701_driver.c'
