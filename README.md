@@ -4,18 +4,16 @@ This is an example of a predriver for DRV8701P using Slow Decay
 This driver provides the SetCommand and GetCommand
 
 SetCommand(float motor_command, bool nsleep)
-  
-  Params: motor_command: -100.0 to 100.0 with negative being reverse and positive being forward
-          nsleep: Boolean variable that will set the DRV8701P chip to sleep
+
+        float motor_command; -100.0 to 100.0 with negative being reverse and positive being forward
+        bool nsleep;   //boolean that sets drv8701p to sleep or awake.
 
 GetCommand();
   return: Struct containing the peripherals outputs
   
-        uint16_t in1
-        
-        uint16_t in2
-        
-        bool  nsleep
+        uint16_t in1;
+        uint16_t in2;
+        bool  nsleep;
 
 
 NOTE: Coasting mode is not implemented in this driver
