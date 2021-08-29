@@ -10,8 +10,11 @@ SetCommand(float motor_command, bool nsleep)
 
 GetCommand();
   return: Struct containing the peripherals outputs
+  
         uint16_t in1
+        
         uint16_t in2
+        
         bool  nsleep
 
 
