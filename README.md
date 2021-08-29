@@ -7,7 +7,14 @@ SetCommand(float motor_command, bool nsleep)
   
   Params: motor_command: -100.0 to 100.0 with negative being reverse and positive being forward
           nsleep: Boolean variable that will set the DRV8701P chip to sleep
-          
+
+GetCommand();
+  return: Struct containing the peripherals outputs
+        uint16_t in1
+        uint16_t in2
+        bool  nsleep
+
+
 NOTE: Coasting mode is not implemented in this driver
 NOTE: Slew rate of 1%/ms is implemented on assumption tick rate is 1khz
 NOTE: This driver slews on increasing forward/reverse pwm and decreasing forward/reverse pwm
