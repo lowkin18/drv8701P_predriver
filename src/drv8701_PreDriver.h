@@ -49,35 +49,3 @@ drv8701_var GetCommand();
 void SetCommand(float motor_command, bool nsleep);
 void tick();
 
-
-
-
-
-
-//1 What is the purpose of slewing the command before outputting it to the predriver? Why might we want to do this?
-/*  The purpose of slewing the command before outputting it to the predriver is to minimize large spikes or changes in current.
-*   Large transients in current can harm and wear out the electronics faster, this will also cause larger accelerations which can hurt or wear out the mechanicals faster.
-*   Large current transients also lead to worse EMI performance and can cause failures during EMC testing. 
-*
-*/
-
-
-//2 How does the brake work? When the brake is applied, what happens to the h-bridge and why does that cause the motor to brake
-/*The brake works by turning the motor into a generator, the mechanical energy is converted back to electrical energy. This works by having the h-bridge turn on the two bottom MOSFETS of the 
-* h-bridge, which are shorted together and create a current flow that the motor needs to now drive.
-*
-*/
-
-//3 What are the advantages/disadvantages of using analog control vs digital (eg SPI)
-/*
-*   Some of the advantages of PWM (Analog control) 
-*       - That you require only 1 pin per direction
-*       - Easier to implement from a firmware perspective
-*       - This can be easier to debug from a hardware perspective
-*       - Can be faster update rate with less EMI noise, SPI would require minimum 16 times clock speed, to send uint16_t      
-*       -
-*   
-*   Some of the disadvantages of PWM(Analog Control)
-*       -
-*
-*/
