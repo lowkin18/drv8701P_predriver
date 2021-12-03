@@ -33,8 +33,9 @@ void SetCommand(float motor_command)
  */
 void tick()
 {
-    uint16_t in1Cmd;    //output for in1 of DRV8701
-    uint16_t in2Cmd;    //output for in2 of DRV8701
+    /*  output vars for DRV8701 IN1,IN2 */
+    uint16_t in1Cmd;   
+    uint16_t in2Cmd;    
 
     /* slew motor command */
     int16_t delta = _motorCmdReq-_motorCmd;
