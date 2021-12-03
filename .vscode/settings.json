@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "hal_analog_module.h": "c",
+        "drv8701_predriver.h": "c"
     }
 }
