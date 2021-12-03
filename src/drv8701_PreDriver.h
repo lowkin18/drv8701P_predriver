@@ -7,7 +7,7 @@
  *              - When both commands are 0, ie both pwm outputs are 0 the driver should be braking:slow decay
  *              - When the motor is in the off cycle driver should be braking:slow decay
  * @version 0.0.1
- * @date 2021-08-28
+ * @date 2021-12-02
  * @copyright Copyright (c) 2021
  * 
  */
