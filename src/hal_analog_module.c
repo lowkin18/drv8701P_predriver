@@ -29,6 +29,8 @@ void HAL_SetOutput(HAL_eOUTPUTS eOutput, uint16_t u16Value)
  * @param eOutput enum value that is the index of the PWM_OUT Vars
  * @return uint16_t value of the variable requested by index
  */
+#ifdef TEST
 uint16_t HAL_GetOutput(HAL_eOUTPUTS eOutput){
     return PWM_OUT[eOutput];
 }
+#endif
